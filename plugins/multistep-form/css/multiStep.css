@@ -1,0 +1,64 @@
+.btn-circle {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.step-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.step-content.active {
+    display: block;
+    opacity: 1;
+}
+
+.step button {
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+.step.active button {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.step.completed button {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.completion-status {
+    transition: width 0.3s ease-in-out;
+    background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+}
+
+@media (max-width: 768px) {
+    .step p {
+        font-size: 12px;
+    }
+
+    .card-body {
+        padding: 1rem !important;
+    }
+
+    .btn-circle {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+    }
+}
